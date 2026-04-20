@@ -60,7 +60,7 @@ try {
     }
 
 } catch (Exception $e) {
-    // Captura falhas de base de dados e redireciona para a página de erro profissional
+    // Captura falhas de base de dados e redireciona para a página de erro 
     header("Location: error.php");
     exit();
 }
