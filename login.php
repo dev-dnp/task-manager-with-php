@@ -15,7 +15,7 @@
             <div class="logo-area" style="justify-content: center; margin-bottom: 20px;">
                 <span class="logo-icon">t/</span>
             </div>
-            <h1>Aceda à sua conta</h1>
+            <h1>Login</h1>
             <p>Acede à tua conta para gerir as tuas tarefas.</p>
         </div>
 
