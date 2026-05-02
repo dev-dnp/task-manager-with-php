@@ -1,3 +1,9 @@
+
+
+-- CREATE DATABASE task_manager;
+-- USE task_manager;
+
+
 CREATE TABLE users (
   id INT NOT NULL AUTO_INCREMENT,
   name VARCHAR(100) NOT NULL,
