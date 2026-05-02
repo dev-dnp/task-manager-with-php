@@ -1,28 +1,15 @@
 <?php
-// ob_start();
 
-// ini_set('display_errors', 0);
-// error_reporting(0);
+require 'config.php';
 
-// Configurações
-$host = 'db'; 
-$user = 'root';
-$pass = 'MinhaSenha!123';
-$db   = 'task_manager';
-
-
-// Ativar o relatório de erros do MySQLi para lançar exceções
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 try {
-    // Tenta a conexão
-    $conn = new mysqli($host, $user, $pass, $db);
+    $conn = new mysqli(HOST, USER, PASSWORD, BASE_DE_DADOS);
     $conn->set_charset("utf8mb4");
-} catch (Exception $e) {
-    // Limpa qualquer aviso que tenha ficado no buffer
-    // ob_end_clean();
-    
-    // redirecionamento 
+
+} catch (mysqli_sql_exception $e) {
+
     header("Location: error.php");
     exit();
 }
