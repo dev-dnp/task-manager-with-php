@@ -15,9 +15,8 @@ try {
     if (isset($_POST['add'])) {
         $title = mysqli_real_escape_string($conn, $_POST['title']);
         $desc = mysqli_real_escape_string($conn, $_POST['description']);
-        $start_date = mysqli_real_escape_string($conn, $_POST['start_date']);
         
-        $sql = "INSERT INTO tasks (title, description, user_id, start_date) VALUES ('$title', '$desc', '$user_id', '$start_date')";
+        $sql = "INSERT INTO tasks (title, description, user_id) VALUES ('$title', '$desc', '$user_id')";
         $conn->query($sql);
         header("Location: index.php");
         exit();
@@ -28,11 +27,9 @@ try {
         $id = intval($_POST['task_id']);
         $title = mysqli_real_escape_string($conn, $_POST['title']);
         $desc = mysqli_real_escape_string($conn, $_POST['description']);
-        $start_date = mysqli_real_escape_string($conn, $_POST['start_date']);
-
         
         // Segurança: Só atualiza se a tarefa pertencer ao utilizador logado
-        $sql = "UPDATE tasks SET title='$title', description='$desc', start_date='$start_date' 
+        $sql = "UPDATE tasks SET title='$title', description='$desc' 
                 WHERE id=$id AND user_id=$user_id";
         
         $conn->query($sql);

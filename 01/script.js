@@ -29,7 +29,6 @@ document.querySelectorAll('.edit-btn').forEach(btn => {
         document.getElementById('edit-id').value = this.dataset.id;
         document.getElementById('edit-title').value = this.dataset.title;
         document.getElementById('edit-desc').value = this.dataset.desc;
-        document.getElementById('edit-date').value = new Date(this.dataset.date).toISOString().split("T")[0]; //this.dataset.desc;
         
         openModal(modalEdit);
     };

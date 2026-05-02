@@ -1,8 +1,8 @@
 <?php
-// ob_start();
+ob_start();
 
-// ini_set('display_errors', 0);
-// error_reporting(0);
+ini_set('display_errors', 0);
+error_reporting(0);
 
 // Configurações
 $host = 'db'; 
@@ -20,7 +20,7 @@ try {
     $conn->set_charset("utf8mb4");
 } catch (Exception $e) {
     // Limpa qualquer aviso que tenha ficado no buffer
-    // ob_end_clean();
+    ob_end_clean();
     
     // redirecionamento 
     header("Location: error.php");
